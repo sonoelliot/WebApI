@@ -1,0 +1,24 @@
+------------------------------------------------------
+01/05/2019 12:21:27 : ERROR :: System.Core - Value cannot be null.
+Parameter name: source
+Occured at : Post
+Trace :    at System.Linq.OrderedEnumerable`2..ctor(IEnumerable`1 source, Func`2 keySelector, IComparer`1 comparer, Boolean descending)
+   at System.Linq.Enumerable.OrderBy[TSource,TKey](IEnumerable`1 source, Func`2 keySelector)
+   at WebApI.Controllers.ValuesController.Post(List`1 intArray) in C:\Users\nb210630\Source\Repos\WebApI\WebApI\Controllers\ValuesController.cs:line 33
+------------------------------------------------------
+------------------------------------------------------
+01/05/2019 12:21:57 : ERROR :: System.Core - Value cannot be null.
+Parameter name: source
+Occured at : Post
+Trace :    at System.Linq.OrderedEnumerable`2..ctor(IEnumerable`1 source, Func`2 keySelector, IComparer`1 comparer, Boolean descending)
+   at System.Linq.Enumerable.OrderBy[TSource,TKey](IEnumerable`1 source, Func`2 keySelector)
+   at WebApI.Controllers.ValuesController.Post(List`1 intArray)
+------------------------------------------------------
+------------------------------------------------------
+01/05/2019 12:27:24 : ERROR :: System.Core - Value cannot be null.
+Parameter name: source
+Occured at : Post
+Trace :    at System.Linq.OrderedEnumerable`2..ctor(IEnumerable`1 source, Func`2 keySelector, IComparer`1 comparer, Boolean descending)
+   at System.Linq.Enumerable.OrderBy[TSource,TKey](IEnumerable`1 source, Func`2 keySelector)
+   at WebApI.Controllers.ValuesController.Post(List`1 intArray) in C:\Users\nb210630\Source\Repos\WebApI\WebApI\Controllers\ValuesController.cs:line 33
+------------------------------------------------------
