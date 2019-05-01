@@ -13,7 +13,9 @@ namespace WebApI.Controllers
 
             ViewBag.Title = "Home Page";
 
-            return View();
+            //redirects to Swagger page used for the documentation
+            return Redirect("http://localhost:29009/Swagger/ui/index");
+           // return View();
         }
     }
 }

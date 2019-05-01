@@ -38,7 +38,11 @@ namespace WebApI.Controllers
             return nearest;
         }
 
-        // Post api/SumOfNumbers
+        /// <summary>
+        /// Returns sum of the numbers in a given list using a for- loop, a while-loop, and recursion..
+        /// </summary>
+        /// <returns>The sum for each loop</returns>
+
         [Route("SumOfNumbers")]
         public Dictionary<string, int> Post([FromBody] List<int> intArray)
         {
@@ -72,13 +76,16 @@ namespace WebApI.Controllers
         }
 
         //A class for the 
+
         public class ListToCombine
         {
             public string[] list { get; set; }
         }
 
-        // POST api/CombinesTwoList/{"list": [ "1,2,3","a,b,c"] }
-
+        /// <summary>
+        ///  combines two lists
+        /// </summary>
+        /// <returns>The sum for each loop</returns>
         [Route("CombinesTwoList")]
         public List<string> Post([FromBody] ListToCombine data)
         {
@@ -97,8 +104,11 @@ namespace WebApI.Controllers
             return ArrayResults;
         }
 
+        /// <summary>
+        /// computes the list of the first 100 Fibonacci numbers.
+        /// </summary>
+        /// <returns> lIst of 100 Fibonacci numbers. </returns>
 
-        // Post api/ListOf100Fibonacci
         [Route("ListOf100Fibonacci")]
         public List<int> Get()
         {
@@ -111,6 +121,11 @@ namespace WebApI.Controllers
 
             return FibonacciList;
         }
+
+        /// <summary>
+        /// find the lowest absolute sum of elements.
+        /// </summary>
+        /// <returns></returns>
         [Route("lowestabsolutesumofelements")]
         public int Post()
         {
