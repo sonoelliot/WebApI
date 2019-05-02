@@ -65,10 +65,8 @@ namespace WebApI.Tests.Controllers
             // var list = string.Format(@"{"list": [  "1, 2, 3",  "a, b, c" ]  }");
             // Data.list. = new { "1,2,3","a,b,c"}";
 
-
-
             // Act
-           List<string> result =  controller.Post(Data);
+            List<string> result = controller.Post(Data);
             Assert.IsNotNull(result);
             Assert.AreEqual(1, result);
             // Assert
