@@ -91,6 +91,23 @@ namespace WebApI.Tests.Controllers
             CollectionAssert.AreEqual(intList, result);
         }
 
+
+        [TestMethod]
+        public void lowestabsolutesumofelements()
+        {
+            // Arrange
+            CalculateController controller = new CalculateController();
+
+            // Act
+            int[] arr = { 1, 2, 6 };
+            int result = controller.Post(arr);
+
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(1, result);
+
+        }
+
         //[TestMethod]
         //public void Delete()
         //{

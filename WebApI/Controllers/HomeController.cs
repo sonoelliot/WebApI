@@ -15,7 +15,9 @@ namespace WebApI.Controllers
 
             //redirects to Swagger page used for the documentation
             return Redirect("http://localhost:29009/Swagger/ui/index");
-           // return View();
+            // return View();
         }
+
+
     }
 }

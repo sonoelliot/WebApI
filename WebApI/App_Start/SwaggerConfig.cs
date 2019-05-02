@@ -71,9 +71,6 @@ namespace WebApI
                         //
                         //c.EnableOAuth2Support("test-client-id", "test-realm", "Swagger UI");
                     });
-            
-
-
         }
 
         protected static string GetXmlCommentsPath()

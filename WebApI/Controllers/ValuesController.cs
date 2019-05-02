@@ -14,20 +14,21 @@ namespace WebApI.Controllers
     [RoutePrefix("api")]
     public class ValuesController : ApiController
     {
-       
+
         ApiHelper web = new ApiHelper();
 
         /// <summary>
         /// Returns the value closest to zero which is supplied via an array parameter.
         /// </summary>
         /// <returns>Number int closest to zero </returns>
+        /// 
         [Route("ClosestToZero")]
         public int Post([FromBody] int[] intArray)
         {
 
             if (intArray == null)
             {
-                throw new NullReferenceException ("IntArray can't be null");
+                throw new NullReferenceException("IntArray can't be null");
             }
 
             int nearest = 0;
@@ -78,15 +79,15 @@ namespace WebApI.Controllers
                 //sum for recursion
                 int recursion = web.SumRecurssion(intArray, 0, intArray.Count);
 
-               
+
                 results.Add("Sum for WhileLoop", sumUsingWhileLoop);
                 results.Add("Sum for recursion", recursion);
                 results.Add("Sum for ForLoop", TotalForLoop);
             }
-            catch(Exception ex)
-            {    
+            catch (Exception ex)
+            {
                 web.WriteLog(ex, MethodBase.GetCurrentMethod().Name);
-                throw ex;  
+                throw ex;
             }
             return results;
             //Display results on a string
@@ -161,17 +162,44 @@ namespace WebApI.Controllers
             return FibonacciList;
         }
 
-        /// <summary>
+        ///<summary>
         /// find the lowest absolute sum of elements.
         /// </summary>
         /// <returns></returns>
-        [Route("lowestabsolutesumofelements")]
-        public int Post()
+        [Route("AddNumbersToAddTo100")]
+        public List<int> Post()
         {
-            int[] Array = {5,6,9,10 };
+            int total = 0;
+            int count = 0;
+            Random random = new Random();
+            var ListOfNumbersToAdd = new List<int>();
 
-            return Array.Max();
+            int NUmbertoCalculate = 0;
 
+            string numbers = "1,2,..,9";
+
+            var listOfNumbers = numbers.Split(',');
+
+            foreach (var item in listOfNumbers)
+            {
+                var num = int.TryParse(item, out NUmbertoCalculate);
+
+                if (NUmbertoCalculate == 0)
+                {
+
+                    while (total < 100)
+                    {
+                        int randNum = random.Next(100);
+                        total = total + 12 + randNum;
+                        ListOfNumbersToAdd.Add(randNum);
+                        if (total > 100)
+                        {
+
+                        }
+                    }
+                }
+            }
+            return ListOfNumbersToAdd;
         }
-}
+    }
 }
